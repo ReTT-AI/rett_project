@@ -1,18 +1,28 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
+import 'screens/splash_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ReTTproject());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class ReTTproject extends StatelessWidget {
+  const ReTTproject({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      title: 'ReTTprojectGPT',
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      theme: ThemeData(
+        brightness: Brightness.light,
+        primarySwatch: Colors.deepPurple,
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        primarySwatch: Colors.deepPurple,
+      ),
+      themeMode: ThemeMode.system,
+      home: const SplashScreen(),
     );
   }
 }
